@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+main{
+    height: 100vh;
+    background-image: linear-gradient(15deg, #A683E3 50%, rgb(255, 237, 255) 50%);
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: column;
+    padding-top: 8rem;
+}
+h1{
+    color: white;
+    padding: 10px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #727272;
+    cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: #929292;
+}
+.box{
+    width: 600px;
+    box-shadow: 4px 3px 10px 0px rgba(128, 128, 128, 0.637);
+    background-color: rgb(255, 250, 250);
+    border-radius: 5px;
+    padding: .5rem 0;
+}
+.notes-box{
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+.heading{
+    padding: 1rem 4rem;
+    margin-bottom: 5rem;
+    background-color: #A683E3;
+}
+p{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(19, 18, 18);
+}
+.note{
+    border-bottom: .5px solid rgba(128, 128, 128, 0.288);
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+input[type="checkbox"]{
+    cursor: pointer;
+}
+input:checked + p {
+    text-decoration: line-through;
+    text-decoration-color: #A683E3;
+    text-decoration-thickness: 3px;
+}
+form input{
+    width: 80%;
+    padding: 1rem 0;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: .5rem 0;
+}
+form button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #A683E3;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+    font-size: 40px;
+}

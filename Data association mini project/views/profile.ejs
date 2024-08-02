@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App - Profile</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1><span>Hello, </span><%= user.name %></h1>
+            <a href="/logout">Logout</a>
+        </div>
+        <form action="/post" method="post">
+            <p class="info">Now you can create Posts</p>
+            <input type="text" placeholder="Title" name="post_title">
+            <textarea name="post_content" class="post-area" placeholder="What's on your mind"></textarea>
+            <div class="submit-contianer">
+                <button type="submit">Create new post</button>
+            </div>
+        </form>
+        <h4 class="heading">Your Posts</h4>
+        <div class="posts_conrtainer">
+            <% if(user.posts.length > 0){        %>
+            <% user.posts.forEach(post => { %>
+                <div class="post">
+                    <button>@ <%= user.username %></button>
+                    <p><%= post.title %></p>
+                    <p><%= post.likes.length %> Likes</p>
+                    <div class="post-button">
+                        <a href="/post/<%= post._id %>">Read More</a>
+                        <a id="like" href="/likepost/<%= post._id %>">
+                            <%= post.likes.indexOf(user._id) === -1 ? "Like" : "Unlike" %>
+                        </a>
+                        <a href="/editpost/<%= post._id %>">Edit</a>
+                    </div>
+                </div>
+            <% }) %>
+            <% }else{ %>
+                <h2>No posts yet</h2>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>

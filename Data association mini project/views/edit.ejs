@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App - Profile</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Edit your Post</h1>
+        </div>
+        <form action="/editpost/<%= post._id %>" method="post">
+            <p class="info">Here you can edit your posts</p>
+            <input type="text" placeholder="Title" name="post_title" value="<%= post.title %>">
+            <textarea name="post_content" class="post-area post-input" placeholder="What's on your mind"><%= post.content %></textarea>
+            <div class="submit-contianer">
+                <button class="edit" type="submit">Update</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

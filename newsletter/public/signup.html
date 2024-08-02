@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            background-color: rgb(32, 31, 31);
+            flex-direction: column; 
+        }
+        .logo{
+            font-size: 4vw;
+            background-color: rgb(83, 0, 83);
+            padding: 1vw 2vw;
+            border-radius: 1vw;
+            color: rgb(255, 255, 240);
+            cursor: pointer;
+            transition: .5s;
+        }
+        .logo:hover{
+            background-color: rgb(61, 0, 61);
+        }
+        h1{
+            font-weight: 100;
+            margin: 2vw 0;
+        }
+        form > input{
+            width: 25vw;
+            outline: none;
+            border: none;
+            margin-bottom: 2px;
+            border-radius: 4px;
+            padding: 1vw;
+            transition: .3s;
+            margin: 1px auto;
+        }
+        form > input:focus{
+            outline: 3px solid rgb(137, 137, 255);
+        }
+        form button{
+            width: 25vw;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            padding: 1vw;
+            font-size: 1.2vw;
+            color: rgb(255, 255, 240);
+            background-color: rgb(83, 0, 83);
+            transition: .5s;
+            cursor: pointer;
+        }
+        form button:hover{
+            background-color: rgb(121, 0, 121);
+        }
+        main p {
+            color: rgb(204, 204, 204);
+            font-size: 1.5vw;
+            position: absolute;
+            bottom: 2vw;
+        }
+        form label{
+            cursor: pointer;
+            font-size: 1.2vw;
+            margin: 0 auto;
+        }
+        form label input{
+            margin: 1.5vw 1vw 2.5vw 5px;
+            margin-right: 5px;
+            height: .9vw;
+            width: 1.1vw;
+        }
+        .top{
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .middle{
+            border-radius: 0px;
+        }
+        .bottom{
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+            <div class="logo">A</div>
+            <h1>Please sign in</h1>
+            <form action="/signup" method="post">
+                <input type="text" autofocus required placeholder="First name" name="fname" class="top"><br>
+                <input class="middle" type="text" required placeholder="Last name" name="lname"><br>
+                <input type="email" required placeholder="Email address" name="email" class="bottom"><br>
+                <label for="check">
+                    <input type="checkbox" id="check" name="check">Remember me
+                </label><br>
+                <button type="submit">Sign me up</button>
+            </form>
+            <p id="footer"></p>
+    </main>
+
+    <script>
+        const para = document.getElementById("footer");
+        let year = new Date().getFullYear();
+        para.innerHTML = `&copy; Ali Asghar 2017-${year}`
+    </script>
+</body>
+</html>

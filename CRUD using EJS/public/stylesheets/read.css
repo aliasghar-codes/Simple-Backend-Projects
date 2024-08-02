@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: linear-gradient(to right, #0e0e0e 0%, rgb(10, 10, 10) 100%);
+}
+main{
+    padding-top: 5vh;
+    padding-left: 3vw;
+    width: 100%;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: rgb(3, 3, 216);
+}
+h2{
+    color: white;
+    margin: 5vh 0;
+    font-size: 4rem;
+    letter-spacing: -3px;
+}
+.users{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.user{
+    color: white;
+    background-color: rgb(27, 26, 26);
+    width: 16vw;
+    height: 35vh;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.img{
+    background-color: rgb(29, 29, 29);
+    width: 14vw;
+    height: 18vh;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.user h5{
+    margin: 1rem 0;
+    color: rgb(190, 190, 190);
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.buttons a:last-child{
+    color: red;
+}
+.buttons a:first-child{
+    color: rgb(255, 227, 227);
+}
